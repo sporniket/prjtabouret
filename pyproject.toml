@@ -1,0 +1,87 @@
+[project]
+name = "prjtabouret-by-sporniket"
+version = "0.0.1-SNAPSHOT"
+description = "Documenting the fusemap of the Lattice GAL16V8 PLD and its drop-in replacement MicroChip (Atmel) ATF16V8."
+authors = [
+    {name = "Sporniket", email = "sporniket.studio@gmail.com"},
+]
+dependencies = []
+requires-python = ">= 3.9"
+readme = "README.md"
+license = {text = "GPL-3.0-or-later"}
+keywords = ["python","cpld","fusemap"]
+
+[project.urls]
+homepage = "https://github.com/sporniket/prjtabouret"
+#TODO documentation = "https://readthedocs.org"
+repository = "https://github.com/sporniket/prjtabouret"
+bug-tracker = "https://github.com/sporniket/prjtabouret/issues"
+
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+
+
+[tool.pdm.scripts]
+# ==========<[ python scripts and libs lifecycle ]>==========
+# --- cleaning
+_clean_tons_of_files = "python3 reclean.py"
+clean = { composite = [ "_clean_tons_of_files" ] }
+# --- linting ---
+_organize_imports = "python3 -m removestar -i ."
+_reformat = "python3 -m black ."
+reformat = { composite = [ "_organize_imports", "_reformat" ] }
+_lint_errors = "python3 -m flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics"
+_lint_warnings = "python3 -m flake8 src --count --ignore=E266 --exit-zero --max-complexity=10 --max-line-length=127 --statistics"
+lint_report = { composite = [ "_lint_errors", "_lint_warnings" ] }
+lint_ci = { composite = [ "reformat", "_lint_errors" ] }
+lint = { composite = [ "reformat", "lint_report" ] }
+# --- building ---
+_build_only = "python3 -m pdm build"
+_install = "python3 install.py"
+make = { composite = ["_build_only"] }
+make_install = { composite = ["_build_only","_install"] }
+# --- test & coverage ---
+_coverage_pytest = "python3 -m coverage run --source=src --branch -m pytest"
+_coverage_report = "python3 -m coverage report -m"
+_coverage_html = "python3 -m coverage html"
+_ci_only = { composite = ["_coverage_pytest","_coverage_report","_coverage_html"] }
+ci = { composite = ["clean", "lint_ci", "_ci_only"] }
+_pytest = "python3 -m pytest -vv"
+test = { composite = ["clean", "reformat", "_pytest"] }
+# --- publish 
+_publish = "python3 -m twine upload --repository pypi dist/*"
+# ==========<[ Database lifecycle ]>==========
+_db_clean_artifacts = "python3 reclean_db_artifacts.py"
+_db_generate_database = "python3 -m prjtabouret.gendb --root ./database"
+_db_generate_lib_of_cells = "python3 -m prjtabouret.genlibcl --root ./yosys"
+
+[tool.pdm.dev-dependencies]
+lint = [
+    "black>=24.4.2",
+    "flake8>=7.1.0",
+    "removestar>=1.5",
+]
+ci = [
+    "pytest>=8.2.2",
+    "coverage>=7.6.0",
+]
+scripting = [
+    "rich>=13.7.1",
+]
+build = [
+    "pdm>=2.17.1",
+    "pip>=24.1.2",
+    "twine>=5.1.1",
+]
+
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
