@@ -26,7 +26,7 @@ import sys
 from unittest.mock import patch
 from contextlib import redirect_stdout, redirect_stderr
 
-from .utils import initializeTmpWorkspace
+from .utils import initializeTmpWorkspace, assert_that_file_has_expected_content
 
 from prjtabouret.gendb import DatabaseGeneratorCli
 
@@ -49,3 +49,10 @@ def test_that_it_generate_database_in_target_folder():
 
     assert os.path.isdir(expected_target_folder)
     assert os.path.isfile(expected_database_file)
+
+    expected_database_content_path = os.path.join(
+        "tests", "data.expected", "database.json"
+    )
+    assert_that_file_has_expected_content(
+        expected_database_file, expected_database_content_path
+    )

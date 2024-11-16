@@ -48,3 +48,7 @@ def initializeTmpWorkspace(files: List[str]) -> str:
             file = file[:-2]
         shutil.copy(file, tmp_dir)
     return tmp_dir
+
+
+def assert_that_file_has_expected_content(pathActual: str, pathExpected: str):
+    assert filecmp.cmp(pathActual, pathExpected, shallow=False)
