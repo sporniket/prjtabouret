@@ -1,6 +1,6 @@
 [project]
 name = "prjtabouret-by-sporniket"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.1.dev0"
 description = "Documenting the fusemap of the Lattice GAL16V8 PLD and its drop-in replacement MicroChip (Atmel) ATF16V8."
 authors = [
     {name = "Sporniket", email = "sporniket.studio@gmail.com"},
