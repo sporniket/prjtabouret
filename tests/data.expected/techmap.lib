@@ -1,0 +1,26 @@
+/*
+---
+SPDX-License-Identifier: CC0-1.0
+(c) 2024 David SPORN
+---
+GAL16v8 Technological map
+Version: 0.0.0.dev0
+
+All parameters/attributes/properties are typical, unless stated otherwise
+*/
+library(gal16v8) {
+    cell(GND) {
+        area: 0;
+        pin(Q) {
+            direction: output;
+            function: "(0)";
+        }
+    }
+    cell(VCC) {
+        area: 0;
+        pin(Q) {
+            direction: output;
+            function: "(1)";
+        }
+    }
+}
