@@ -168,6 +168,7 @@ def initPins(x, *, pin1: str = "I1", pin11: str = "I10"):
 def buildAndWriteDatabase(rootFolder: str):
     # 1.
     result = {
+        "__version__": "1.0.0",
         "__licence__": "SPDX-License-Identifier: CC0-1.0",
         "__doc__": [
             "# Database for the GAL16v8 PLD",
