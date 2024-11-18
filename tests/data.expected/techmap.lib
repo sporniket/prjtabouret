@@ -59,4 +59,160 @@ library(gal16v8) {
             function: "(!A)";
         }
     }
+
+    cell(OR2) {
+        area: 200;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A+B))";
+        }
+    }
+    cell(OR3) {
+        area: 300;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A+B+C))";
+        }
+    }
+    cell(OR4) {
+        area: 400;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A+B+C+D))";
+        }
+    }
+    cell(OR5) {
+        area: 500;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A+B+C+D+E))";
+        }
+    }
+    cell(OR6) {
+        area: 600;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A+B+C+D+E+F))";
+        }
+    }
+    cell(OR7) {
+        area: 700;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A+B+C+D+E+F+G))";
+        }
+    }
+    cell(OR8) {
+        area: 800;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A+B+C+D+E+F+G+H))";
+        }
+    }
+
 }

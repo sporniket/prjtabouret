@@ -24,6 +24,70 @@ import json
 TARGET_FILENAME = "techmap-gal16v8"
 
 
+def makeInputPin(name: str) -> str:
+    return f"""        pin({name}) {{
+            direction: input;
+        }}
+"""
+
+
+def pinNameFromInteger(value: int) -> str:
+    """Maps a number into a sequence of letters, by replacing each decimal digit by the corresponding letter starting from 'A' mapped to 1."""
+    if value <= 0:
+        raise ValueError(f"not.strictly.positive:{value}")
+
+    digitToAlpha = ["J", "A", "B", "C", "D", "E", "F", "G", "H", "I"]
+    current = value
+    result = ""
+    while current > 0:
+        result = digitToAlpha[current % 10] + result
+        current = current // 10
+
+    return result
+
+
+def makeInputPinSet(min: int, max: int):
+    """Makes a dictionnary that associate a set of input pin name and their definitions for a cell"""
+    result = {}
+    for p in range(min, max):
+        pname = pinNameFromInteger(p)
+        result[pname] = makeInputPin(pname)
+    return result
+
+
+def makeOutputPin(name: str, expr: str):
+    return f"""        pin({name}) {{
+            direction: output;
+            function: "(({expr}))";
+        }}
+"""
+
+
+def makeGateCell(
+    name: str,
+    areaSize: int,
+    inputSize: int,
+    outputName: str,
+    *,
+    innerOperator: str = "",
+    outerOperator: str = "",
+):
+    """Makes a gate cell, on the assumption that its output function is f"{outerOperator}({innerOperator.join(input_names)})"""
+    if not innerOperator:
+        raise ValueError(f"empty:{innerOperator}")
+    pinSet = makeInputPinSet(1, 1 + inputSize)
+    expr = innerOperator.join(list(pinSet))
+    if outerOperator:
+        expr = f"{outerOperator}({expr})"
+
+    body = "".join([i for (k, i) in pinSet.items()] + [makeOutputPin(outputName, expr)])
+
+    return f"""    cell({name}) {{
+        area: {areaSize};
+{body}    }}
+"""
+
+
 def buildAndWriteTechnicalMap(rootFolder: str):
     # 1.
     prologue = """/*
@@ -86,10 +150,19 @@ library(gal16v8) {
             direction: output;
             function: "(!A)";
         }
-    }"""
+    }
+"""
 
     epilogue = """}
 """
 
+    # -- make OR gates
+    orGates = "".join(
+        [
+            makeGateCell(f"OR{i}", i * 100, i, "Q", innerOperator="+")
+            for i in range(2, 9)
+        ]
+    )
+
     with open(f"{rootFolder}/{TARGET_FILENAME}.lib", encoding="utf-8", mode="w") as f:
-        f.write("\n".join([prologue, epilogue]))
+        f.write("\n".join([prologue, orGates, epilogue]))
