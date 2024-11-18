@@ -215,4 +215,1803 @@ library(gal16v8) {
         }
     }
 
+    cell(AND2) {
+        area: 200;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B))";
+        }
+    }
+    cell(AND3) {
+        area: 300;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C))";
+        }
+    }
+    cell(AND4) {
+        area: 400;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D))";
+        }
+    }
+    cell(AND5) {
+        area: 500;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E))";
+        }
+    }
+    cell(AND6) {
+        area: 600;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F))";
+        }
+    }
+    cell(AND7) {
+        area: 700;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G))";
+        }
+    }
+    cell(AND8) {
+        area: 800;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H))";
+        }
+    }
+    cell(AND9) {
+        area: 900;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I))";
+        }
+    }
+    cell(AND10) {
+        area: 1000;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J))";
+        }
+    }
+    cell(AND11) {
+        area: 1100;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA))";
+        }
+    }
+    cell(AND12) {
+        area: 1200;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB))";
+        }
+    }
+    cell(AND13) {
+        area: 1300;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC))";
+        }
+    }
+    cell(AND14) {
+        area: 1400;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD))";
+        }
+    }
+    cell(AND15) {
+        area: 1500;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE))";
+        }
+    }
+    cell(AND16) {
+        area: 1600;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF))";
+        }
+    }
+    cell(AND17) {
+        area: 1700;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG))";
+        }
+    }
+    cell(AND18) {
+        area: 1800;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH))";
+        }
+    }
+    cell(AND19) {
+        area: 1900;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI))";
+        }
+    }
+    cell(AND20) {
+        area: 2000;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ))";
+        }
+    }
+    cell(AND21) {
+        area: 2100;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA))";
+        }
+    }
+    cell(AND22) {
+        area: 2200;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(CB) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA CB))";
+        }
+    }
+    cell(AND23) {
+        area: 2300;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(CB) {
+            direction: input;
+        }
+        pin(CC) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA CB CC))";
+        }
+    }
+    cell(AND24) {
+        area: 2400;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(CB) {
+            direction: input;
+        }
+        pin(CC) {
+            direction: input;
+        }
+        pin(CD) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA CB CC CD))";
+        }
+    }
+    cell(AND25) {
+        area: 2500;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(CB) {
+            direction: input;
+        }
+        pin(CC) {
+            direction: input;
+        }
+        pin(CD) {
+            direction: input;
+        }
+        pin(CE) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA CB CC CD CE))";
+        }
+    }
+    cell(AND26) {
+        area: 2600;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(CB) {
+            direction: input;
+        }
+        pin(CC) {
+            direction: input;
+        }
+        pin(CD) {
+            direction: input;
+        }
+        pin(CE) {
+            direction: input;
+        }
+        pin(CF) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA CB CC CD CE CF))";
+        }
+    }
+    cell(AND27) {
+        area: 2700;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(CB) {
+            direction: input;
+        }
+        pin(CC) {
+            direction: input;
+        }
+        pin(CD) {
+            direction: input;
+        }
+        pin(CE) {
+            direction: input;
+        }
+        pin(CF) {
+            direction: input;
+        }
+        pin(CG) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA CB CC CD CE CF CG))";
+        }
+    }
+    cell(AND28) {
+        area: 2800;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(CB) {
+            direction: input;
+        }
+        pin(CC) {
+            direction: input;
+        }
+        pin(CD) {
+            direction: input;
+        }
+        pin(CE) {
+            direction: input;
+        }
+        pin(CF) {
+            direction: input;
+        }
+        pin(CG) {
+            direction: input;
+        }
+        pin(CH) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA CB CC CD CE CF CG CH))";
+        }
+    }
+    cell(AND29) {
+        area: 2900;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(CB) {
+            direction: input;
+        }
+        pin(CC) {
+            direction: input;
+        }
+        pin(CD) {
+            direction: input;
+        }
+        pin(CE) {
+            direction: input;
+        }
+        pin(CF) {
+            direction: input;
+        }
+        pin(CG) {
+            direction: input;
+        }
+        pin(CH) {
+            direction: input;
+        }
+        pin(CI) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA CB CC CD CE CF CG CH CI))";
+        }
+    }
+    cell(AND30) {
+        area: 3000;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(CB) {
+            direction: input;
+        }
+        pin(CC) {
+            direction: input;
+        }
+        pin(CD) {
+            direction: input;
+        }
+        pin(CE) {
+            direction: input;
+        }
+        pin(CF) {
+            direction: input;
+        }
+        pin(CG) {
+            direction: input;
+        }
+        pin(CH) {
+            direction: input;
+        }
+        pin(CI) {
+            direction: input;
+        }
+        pin(CJ) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA CB CC CD CE CF CG CH CI CJ))";
+        }
+    }
+    cell(AND31) {
+        area: 3100;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(CB) {
+            direction: input;
+        }
+        pin(CC) {
+            direction: input;
+        }
+        pin(CD) {
+            direction: input;
+        }
+        pin(CE) {
+            direction: input;
+        }
+        pin(CF) {
+            direction: input;
+        }
+        pin(CG) {
+            direction: input;
+        }
+        pin(CH) {
+            direction: input;
+        }
+        pin(CI) {
+            direction: input;
+        }
+        pin(CJ) {
+            direction: input;
+        }
+        pin(DA) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA CB CC CD CE CF CG CH CI CJ DA))";
+        }
+    }
+    cell(AND32) {
+        area: 3200;
+        pin(A) {
+            direction: input;
+        }
+        pin(B) {
+            direction: input;
+        }
+        pin(C) {
+            direction: input;
+        }
+        pin(D) {
+            direction: input;
+        }
+        pin(E) {
+            direction: input;
+        }
+        pin(F) {
+            direction: input;
+        }
+        pin(G) {
+            direction: input;
+        }
+        pin(H) {
+            direction: input;
+        }
+        pin(I) {
+            direction: input;
+        }
+        pin(J) {
+            direction: input;
+        }
+        pin(BA) {
+            direction: input;
+        }
+        pin(BB) {
+            direction: input;
+        }
+        pin(BC) {
+            direction: input;
+        }
+        pin(BD) {
+            direction: input;
+        }
+        pin(BE) {
+            direction: input;
+        }
+        pin(BF) {
+            direction: input;
+        }
+        pin(BG) {
+            direction: input;
+        }
+        pin(BH) {
+            direction: input;
+        }
+        pin(BI) {
+            direction: input;
+        }
+        pin(BJ) {
+            direction: input;
+        }
+        pin(CA) {
+            direction: input;
+        }
+        pin(CB) {
+            direction: input;
+        }
+        pin(CC) {
+            direction: input;
+        }
+        pin(CD) {
+            direction: input;
+        }
+        pin(CE) {
+            direction: input;
+        }
+        pin(CF) {
+            direction: input;
+        }
+        pin(CG) {
+            direction: input;
+        }
+        pin(CH) {
+            direction: input;
+        }
+        pin(CI) {
+            direction: input;
+        }
+        pin(CJ) {
+            direction: input;
+        }
+        pin(DA) {
+            direction: input;
+        }
+        pin(DB) {
+            direction: input;
+        }
+        pin(Q) {
+            direction: output;
+            function: "((A B C D E F G H I J BA BB BC BD BE BF BG BH BI BJ CA CB CC CD CE CF CG CH CI CJ DA DB))";
+        }
+    }
+
 }

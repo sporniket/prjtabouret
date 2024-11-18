@@ -32,11 +32,14 @@ def makeInputPin(name: str) -> str:
 
 
 def pinNameFromInteger(value: int) -> str:
-    """Maps a number into a sequence of letters, by replacing each decimal digit by the corresponding letter starting from 'A' mapped to 1."""
-    if value <= 0:
-        raise ValueError(f"not.strictly.positive:{value}")
+    """Maps a number into a sequence of letters, by replacing each decimal digit by the corresponding letter starting from 'A' mapped to 0."""
+    if value < 0:
+        raise ValueError(f"not.positive:{value}")
 
-    digitToAlpha = ["J", "A", "B", "C", "D", "E", "F", "G", "H", "I"]
+    if value == 0:
+        return "A"
+
+    digitToAlpha = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
     current = value
     result = ""
     while current > 0:
@@ -75,7 +78,7 @@ def makeGateCell(
     """Makes a gate cell, on the assumption that its output function is f"{outerOperator}({innerOperator.join(input_names)})"""
     if not innerOperator:
         raise ValueError(f"empty:{innerOperator}")
-    pinSet = makeInputPinSet(1, 1 + inputSize)
+    pinSet = makeInputPinSet(0, inputSize)
     expr = innerOperator.join(list(pinSet))
     if outerOperator:
         expr = f"{outerOperator}({expr})"
@@ -164,5 +167,13 @@ library(gal16v8) {
         ]
     )
 
+    # -- make AND gates
+    andGates = "".join(
+        [
+            makeGateCell(f"AND{i}", i * 100, i, "Q", innerOperator=" ")
+            for i in range(2, 33)
+        ]
+    )
+
     with open(f"{rootFolder}/{TARGET_FILENAME}.lib", encoding="utf-8", mode="w") as f:
-        f.write("\n".join([prologue, orGates, epilogue]))
+        f.write("\n".join([prologue, orGates, andGates, epilogue]))
