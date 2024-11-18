@@ -76,6 +76,16 @@ library(gal16v8) {
             function: "IQN";
         }
         ; // empty statement
+    }
+    cell(NOT) {
+        area: 100;
+        pin(A) {
+            direction: input;
+        }
+        pin(QN) {
+            direction: output;
+            function: "(!A)";
+        }
     }"""
 
     epilogue = """}
