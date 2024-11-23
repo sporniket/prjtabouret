@@ -50,5 +50,17 @@ def initializeTmpWorkspace(files: List[str]) -> str:
     return tmp_dir
 
 
-def assert_that_file_has_expected_content(pathActual: str, pathExpected: str):
-    assert filecmp.cmp(pathActual, pathExpected, shallow=False)
+def assert_that_file_has_expected_content(
+    pathActual: str, pathExpected: str, substitutionMap: dict[str, str] = None
+):
+    if substitutionMap:
+        with open(pathActual, "rt") as fact:
+            actualBody = fact.read()
+        with open(pathExpected, "rt") as fexp:
+            expectedBody = fexp.read()
+        for k, v in substitutionMap.items():
+            expectedBody = expectedBody.replace(k, v)
+        assert len(actualBody) > 0
+        assert actualBody == expectedBody
+    else:
+        assert filecmp.cmp(pathActual, pathExpected, shallow=False)

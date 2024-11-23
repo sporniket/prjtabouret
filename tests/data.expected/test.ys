@@ -1,0 +1,4 @@
+echo on
+read_verilog @@@TMP@@@/test.v
+show -viewer none -format ps -prefix @@@TMP@@@/build/test_show
+write_json @@@TMP@@@/build/test.json
