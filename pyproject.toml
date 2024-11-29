@@ -1,6 +1,6 @@
 [project]
 name = "prjtabouret-by-sporniket"
-version = "0.0.1.dev0"
+version = "0.0.1"
 description = "Documenting the fusemap of the Lattice GAL16V8 PLD and its drop-in replacement MicroChip (Atmel) ATF16V8."
 authors = [
     {name = "Sporniket", email = "sporniket.studio@gmail.com"},
@@ -17,6 +17,10 @@ homepage = "https://github.com/sporniket/prjtabouret"
 repository = "https://github.com/sporniket/prjtabouret"
 bug-tracker = "https://github.com/sporniket/prjtabouret/issues"
 
+[project.scripts]
+prjtabouret_gendb = "prjtabouret.gendb.__main__:main"
+prjtabouret_gentm = "prjtabouret.gentm.__main__:main"
+prjtabouret_synth_gal16v8 = "prjtabouret.synth_gal16v8.__main__:main"
 
 [build-system]
 requires = ["pdm-backend"]
