@@ -21,6 +21,7 @@ If not, see <https://www.gnu.org/licenses/>. 
 """
 import json
 import os
+import subprocess
 
 FILENAME_LIBERTY = "techmap-gal16v8.lib"
 
@@ -37,11 +38,17 @@ def writeYosysScript(sourcename: str, workdir: str):
     name = extractNameFromFile(sourcename)
     scriptName = computeYosysScriptName(name)
     scriptFile = os.path.join(workdir, scriptName)
+    netFile = os.path.join(workdir, f"{name}.json")
     with open(scriptFile, encoding="utf-8", mode="w") as f:
         f.write(
             f"""echo on
 read_verilog {sourcename}
 show -viewer none -format ps -prefix {workdir}/{name}_show
-write_json {workdir}/{name}.json
+write_json {netFile}
 """
         )
+
+    # calling yosys
+    invoke_args = ["yosys", "-s", scriptFile]
+    runResult = subprocess.run(invoke_args)
+    runResult.check_returncode()
