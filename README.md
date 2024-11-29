@@ -26,7 +26,7 @@ Initial release. It provides the following scripts :
 
 * `gendb` : generate a json database of the Lattice GAL16V8 PLD.
 * `gentm` : generate a liberty file to be used by yosys for its technology mapping step.
-* `synth_gal16v8` : a script that calls yosys (and later nextpnr) to process an input file (for now a verilog source).
+* `synth_gal16v8` : a script that calls yosys to process an input file ; _this is just a Proof Of Concept_, for now it just read the given verilog and directly generate a dot view and the netlist.
 
 ### Licence
 
