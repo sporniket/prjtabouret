@@ -9,9 +9,9 @@
 
 ### Synopsys
 
-`prjtabouret_gendb [--help] [--root <root path>]`
+`prjtabouret_gendb [--help] --root <root path>`
 
-`python3 -m prjtabouret.gendb [--help] [--root <root path>]`
+`python3 -m prjtabouret.gendb [--help] --root <root path>`
 
 #### Positional arguments
 
@@ -25,6 +25,8 @@
 ### Description
 
 Generate the database file documenting the fusemap of the Lattice GAL16V8 PLD and its drop-in replacement MicroChip (Atmel) ATF16V8.
+
+The generated file is named `database-gal16v8.json`
 
 ### Typical invocation
 
