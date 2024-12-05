@@ -1,0 +1,11 @@
+echo on
+#read_liberty ./techmap.lib
+read_verilog ./test-comb.v
+hierarchy -check -top DemoSimpleComb__GAL16V8_DIP__registered
+tribuf
+proc
+splitnets
+synth
+abc -g AND,OR
+show -viewer none -format svg -prefix ./build/test-comb_show
+write_json ./build/test-comb.json
