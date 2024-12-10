@@ -73,12 +73,13 @@ If not, see <https://www.gnu.org/licenses/>. 
         # )
 
         # Add the arguments
-        # parser.add_argument(
-        #    "--top",
-        #    metavar="<module_name>",
-        #    type=str,
-        #    help="the name of the top module to consider.",
-        # )
+        parser.add_argument(
+            "--topmodule",
+            metavar="<module_name>",
+            default="top",
+            type=str,
+            help="the name of the top module.",
+        )
 
         # Source file
         parser.add_argument(
@@ -140,7 +141,7 @@ If not, see <https://www.gnu.org/licenses/>. 
                 return 1
 
             # OK, proceed
-            writeYosysScript(args.source, args.workdir)
+            writeYosysScript(args.source, args.workdir, args.topmodule)
 
             # DONE
             return 0

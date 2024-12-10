@@ -34,7 +34,7 @@ def extractNameFromFile(name: str) -> str:
     return os.path.splitext(os.path.basename(name))[0]
 
 
-def writeYosysScript(sourcename: str, workdir: str):
+def writeYosysScript(sourcename: str, workdir: str, topmodule: str):
     name = extractNameFromFile(sourcename)
     scriptName = computeYosysScriptName(name)
     scriptFile = os.path.join(workdir, scriptName)
@@ -43,6 +43,12 @@ def writeYosysScript(sourcename: str, workdir: str):
         f.write(
             f"""echo on
 read_verilog {sourcename}
+hierarchy -check -top {topmodule}
+tribuf
+proc
+splitnets
+synth
+abc -g AND,OR
 show -viewer none -format ps -prefix {workdir}/{name}_show
 write_json {netFile}
 """

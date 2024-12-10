@@ -1,4 +1,10 @@
 echo on
 read_verilog @@@TMP@@@/test.v
+hierarchy -check -top @@@TOP@@@
+tribuf
+proc
+splitnets
+synth
+abc -g AND,OR
 show -viewer none -format ps -prefix @@@TMP@@@/build/test_show
 write_json @@@TMP@@@/build/test.json
